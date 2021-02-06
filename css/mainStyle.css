@@ -9,7 +9,7 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-image: url('../img/back-img.jpg');
+    background:black
 }
 .cup-img {
     position: absolute;

@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Sriracha', cursive;
+    background-color: #232325;
+    max-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    margin-top: 15px;
+    text-decoration: underline;
+    color: #2265FF;
+}
+
+
+.info {
+    display: flex;
+    width: 60vw;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+
+}
+
+.img {
+    display: block;
+    width: 300px;
+    height: 300px;
+}
+
+.top {
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    
+}
+
+.container:hover .top {
+    opacity: 1;
+}
+
+.text  p {
+    color: #2265FF;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    text-align: center;
+}
+
+.box1  {
+    height: 100%;
+    width: 0;
+    top:0;
+    left: 0;
+    background-color: #1F012F;
+}
+
+.container:hover .box1 {
+    width: 100%;
+}
+
+.box2  {
+    height: 0;
+    width: 100%;
+    top:0;
+    left: 0;
+    background-color: #1F012F;
+}
+
+.container:hover .box2 {
+    height: 100%;
+}
+
+.box3  {
+    height: 100%;
+    width: 0;
+    top:0;
+    right: 0;
+    background-color: #1F012F;
+}
+
+.container:hover .box3 {
+    width: 100%;
+}
+
+aside {
+    position:absolute;
+    top:30%;
+    left: 0;
+    margin-left: 9px;
+    z-index: 11;
+    font-size: 30px;
+    color: #2265FF;
+}
+
+.nav  ul  li a {
+    list-style: none;
+    text-decoration: none;
+    color: #2265FF;
+    
+}
+
+.nav  ul  li a:hover {
+    text-decoration: underline;
+    color: aliceblue;
+    
+}
