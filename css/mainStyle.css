@@ -2,18 +2,29 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Sriracha', cursive;
 }
 
 .mainpage {
     position: relative;
     width: 100vw;
     height: 100vh;
-    background-color: black;
-    
-
+    background-image: url('../img/back-img.jpg');
 }
+.cup-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url('../img/back-img.jpg');
+    background-repeat: no-repeat;
+    border-color: transparent;
+    background-size: contain;
+    background-position: center;
+    overflow: hidden;
+    
+ } 
 
-.fog-container {
+ .fog-container {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -53,24 +64,41 @@
 }
 }
 
-.main-img {
+.title {
+    position: absolute;
+    color: #2265FF;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    z-index: 10;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
+.title > h1 {
+    font-size: 40px;
+    text-align: center;
+}
 
-.cup-img {
-   position: absolute;
-   top: 25%;
-   left: 35%;
-   background-image: url('../img/cup.jpg');
-   background-repeat: no-repeat;
-   border-color: transparent;
-   background-size: contain;
-   background-position: center;
-   
-   
-   
-} 
+aside {
+    position:absolute;
+    top:30%;
+    left: 0;
+    margin-left: 9px;
+    z-index: 11;
+    font-size: 30px;
+    color: #2265FF;
+}
+
+.nav  ul  li a {
+    list-style: none;
+    text-decoration: none;
+    color: #2265FF;
+    
+}
+
+.nav  ul  li a:hover {
+    text-decoration: underline;
+    color: aliceblue;
+    
+}
