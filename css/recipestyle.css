@@ -14,11 +14,25 @@ h1 {
     text-decoration: underline;
     text-shadow: 1px 1px 0 0px #2265FF;
 }
+
+@media screen and (min-width:640px)  {
+    .container-box {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1px;
+    }
+}
+
 .container {
     text-align: center;
     font-size: 30px;
      width: 100vw;
-     height: 100vh;
+     height: 90vh;
 }
 
 .container-box {
@@ -29,9 +43,7 @@ h1 {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    
     padding-left:35px;
-  
 }
 
 .container .box {
@@ -92,23 +104,69 @@ h1 {
     color: #2265FF;
 }
 
-aside {
-    position:absolute;
-    top:30%;
-    left: 0;
-    margin-left: 9px;
-    z-index: 11;
-    text-align: left;
+
+nav {
+    height: 10vh;
+    background-color: #1F012F;
+    opacity: 0.9;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
     
 }
 
-.nav  ul  li a {
-    list-style: none;
+.nav-links li a {
     text-decoration: none;
     color: #2265FF;
+    font-size: 36px;
 }
 
-.nav  ul  li a:hover {
+
+@media screen and (max-width: 768px){
+    .line {
+        width: 30px;
+        height: 3px;
+        background:#2265FF;
+        margin: 5px;
+}
+    nav {
+        position: relative;
+    }
+    .hamburger {
+        z-index: 15;
+        position: absolute;
+        cursor: pointer;
+        left: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+
+    }
+    
+    .nav-links {
+        z-index: 14;
+        position: fixed;
+        background: #1F012F;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(10px at 10% -10%);
+        -webkit-clip-path:circle(10px at 0% -10%);
+        transition: all 1s ease-out;
+    }
+
+    .nav-links.open {
+        clip-path: circle(800px at 10% 10%);
+        -webkit-clip-path:circle(800px at 10% 10%);
+    }
+}
+
+.nav-links li a:hover {
     text-decoration: underline;
     color: aliceblue;
     

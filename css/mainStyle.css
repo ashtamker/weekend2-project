@@ -8,7 +8,7 @@
 .mainpage {
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     background:black
 }
 .cup-img {
@@ -80,24 +80,68 @@
     text-align: center;
 }
 
-aside {
-    position:absolute;
-    top:30%;
-    left: 0;
-    margin-left: 9px;
-    z-index: 11;
-    font-size: 30px;
-    color: #2265FF;
-}
-
-.nav  ul  li a {
-    list-style: none;
-    text-decoration: none;
-    color: #2265FF;
+nav {
+    height: 10vh;
+    background-color: #1F012F;
     
 }
 
-.nav  ul  li a:hover {
+.nav-links {
+    display: flex;
+    list-style: none;
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #2265FF;
+    font-size: 36px;
+}
+
+
+@media screen and (max-width: 768px){
+    .line {
+        width: 30px;
+        height: 3px;
+        background:#2265FF;
+        margin: 5px;
+}
+    nav {
+        position: relative;
+    }
+    .hamburger {
+        z-index: 15;
+        position: absolute;
+        cursor: pointer;
+        left: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+
+    }
+    
+    .nav-links {
+        z-index: 14;
+        position: fixed;
+        background: #1F012F;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(10px at 10% -10%);
+        -webkit-clip-path:circle(10px at 0% -10%);
+        transition: all 1s ease-out;
+    }
+
+    .nav-links.open {
+        clip-path: circle(800px at 10% 10%);
+        -webkit-clip-path: circle(800px at 10% 10%);
+    }
+}
+
+.nav-links li a:hover {
     text-decoration: underline;
     color: aliceblue;
     
