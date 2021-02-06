@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.mainpage {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    
+
+}
+
+.fog-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.fog-img {
+    position: absolute;
+    height: 100vh;
+    width: 300vw;
+    z-index: 2;
+}
+
+.fog1 {
+    background: url('../img/fog-1.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center;
+    animation: smoke 60s linear infinite;
+}
+
+.fog2 {
+    background: url('../img/fog-2.png');
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: center;
+    animation: smoke 30s linear infinite;
+}
+
+@keyframes smoke {
+  0% {
+      transform: translate3d(0, 0, 0);
+  }  
+  100% {
+    transform: translate3d(-200vh , 0, 0)
+}
+}
+
+.main-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cup-img {
+   position: absolute;
+   top: 25%;
+   left: 35%;
+   background-image: url('../img/cup.jpg');
+   background-repeat: no-repeat;
+   border-color: transparent;
+   background-size: contain;
+   background-position: center;
+   
+   
+   
+} 
