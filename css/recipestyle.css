@@ -10,7 +10,8 @@ body {
 }
 
 h1 {
-    color: #2265FF;
+    /* color: #2265FF; */
+    color: aquamarine;
     text-decoration: underline;
     text-shadow: 1px 1px 0 0px #2265FF;
 }
